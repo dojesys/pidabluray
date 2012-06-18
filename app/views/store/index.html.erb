@@ -2,7 +2,7 @@
 <p id="notice" ><%= notice %></p>
 <% end %>
 
-<h1>Catalog</h1>
+<h1>Catálogo</h1>
 
 <% @products.each do |product| %>
   <div class="entry" >
@@ -13,7 +13,20 @@
     <span class="price" ><%= number_to_currency(product.price) %></span>
   </div>
   <div class="id_line" >
+    <span><%= "ID:" %></span>
     <span class="id"><%= product.id %></span>
+  </div>
+  
+  <div class="trailer_line" >
+    <a href="<%= product.trailer %>" >Ver Trailer</a><br />
+  </div>    
+  <div class="released_at_line" >
+    <span class="released_at:"> en nuestro catalogo desde: <%= product.released_at %></span>
+  </div>
+ 
+ 
+  <div class="evaluation_line" >
+    <span class="evaluation:"><%= product.evaluation %></span>
   </div>
 </div>
 <% end %>

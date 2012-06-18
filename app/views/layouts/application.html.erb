@@ -9,15 +9,20 @@
 </head>
 <body id="store" >
   <div id="banner" >
-    <%= image_tag("logo.png") %>
+    <%= image_tag("logo4.jpg") %>
     <%= @page_title || "Peliculas Bluray" %>
   </div>
     <div id="columns" >
     <div id="side" >
-      <a href="http://www...." >Home</a><br />
-      <a href="http://www..../faq" >Questions</a><br />
+      <a ><%= @date %></a><br />
+      <br />, <br />
+      <a href="http://0.0.0.0:3000/" >Home</a><br />
+      <a href="http://0.0.0.0:3000/products" >Administrar</a><br />
       <a href="http://www..../news" >News</a><br />
       <a href="http://www..../contact" >Contact</a><br />
+      <a <%= link_to "Inicio", store_index_path %></a><br />
+
+      
     </div>
     <div id="main" >
 
