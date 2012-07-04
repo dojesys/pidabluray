@@ -2,24 +2,22 @@
 <html>
 <head>
   <title>Pidabluray</title>
-  <%= stylesheet_link_tag "scaffold" %>
-  <%= stylesheet_link_tag "pidabluray", :media => "all" %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>  
+  
+  </head>
 <body id="store" >
   <div id="banner" >
-    <%= image_tag("logo4.jpg") %>
+    <%= image_tag("logo.jpg") %>
     <%= @page_title || "Peliculas Bluray" %>
   </div>
     <div id="columns" >
     <div id="side" >
       <a ><%= @date %></a><br />
-      <br /> <br />
       
       <a <%= link_to "Inicio", store_index_path %></a><br />
       <a <%= link_to "Administrar", products_path %></a><br />
-      <a href="http://www..../contact" >Contact</a><br />
       
     </div>
     <div id="main" >
