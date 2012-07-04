@@ -13,7 +13,7 @@
 #store h1 {
         font:  150% sans-serif;
         color: #226;
-        border-bottom: 3px dotted #77d;
+        border-bottom: 2px dotted #77d;
 }
 
 /* Styles for products/index */
@@ -68,28 +68,30 @@
 /* Styles for main page */
 
 #banner {
-  background: #141414;
-  padding-top: 60px;
+  background: #E5ECEE;
+  padding-top: 100px;
   padding-bottom: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
-  color: #fff;
+  color: #3C3C3B;
   text-align: center;
 }
 
 #banner img {
   float: left;
+  width: 70px;
+  height:50px;
 }
 
 #columns {
-  background: #141414;
+  background: #E5ECEE;
 }
 
 #main {
   margin-left: 17em;
   padding-top: 4ex;
   padding-left: 2em;
-  background: white;
+  background: White;
 }
 
 #side {
@@ -98,13 +100,14 @@
   padding-left: 1em;
   padding-bottom: 1em;
   width: 16em;
-  background: #141414;
+  background: #E5ECEE;
 }
 
 #side a {
-  color: #bfb;
-  font-size: small;
+  color: #3C3C3B;
+  font-size: 100%;
 }
+
 /* END:mainlayout */
 
 /* An entry in the store catalog */
@@ -170,6 +173,11 @@
   margin-right: 2em;
 }
 #store .entry  .evaluation {
+  color: #44a;
+  font-weight: bold;
+  margin-right: 2em;
+}
+#store .entry  .category {
   color: #44a;
   font-weight: bold;
   margin-right: 2em;
