@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+  
     @products = Product.all
 
     respond_to do |format|
@@ -24,6 +25,7 @@ class ProductsController < ApplicationController
   # GET /products/new
   # GET /products/new.json
   def new
+
     @product = Product.new
 
     respond_to do |format|
@@ -56,6 +58,7 @@ class ProductsController < ApplicationController
   # PUT /products/1
   # PUT /products/1.json
   def update
+
     @product = Product.find(params[:id])
 
     respond_to do |format|

@@ -1,4 +1,7 @@
 class Product < ActiveRecord::Base
+  has_many :categorizations
+  has_many :categories, :through => :categorizations
+  
   default_scope :order => 'id'
   attr_accessible :description, :id, :image_url, :price, :title, :trailer, :released_at, :evaluation
   validates :title, :description, :image_url, :presence => true

@@ -1,4 +1,8 @@
 Pidabluray::Application.routes.draw do
+  resources :categorizations
+
+  resources :categories
+
   get "store/index"
 
   resources :products

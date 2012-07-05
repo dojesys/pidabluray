@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Product:</b>
+  <%= @categorization.product_id %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @categorization.category_id %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @categorization.position %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @categorization.created_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_categorization_path(@categorization) %> |
+<%= link_to 'Back', categorizations_path %>
