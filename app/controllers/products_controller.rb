@@ -36,12 +36,21 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+  
     @product = Product.find(params[:id])
+  
   end
 
   # POST /products
   # POST /products.json
   def create
+    
+    if params[:product][:category_ids]
+      params[:product][:category_ids] = params[:product][:category_ids].map{|k, v| k}
+    else
+      params[:product][:category_ids] = []
+    end
+  
     @product = Product.new(params[:product])
 
     respond_to do |format|
@@ -58,6 +67,12 @@ class ProductsController < ApplicationController
   # PUT /products/1
   # PUT /products/1.json
   def update
+
+    if params[:product][:category_ids]
+      params[:product][:category_ids] = params[:product][:category_ids].map{|k, v| k}
+    else
+      params[:product][:category_ids] = []
+    end
 
     @product = Product.find(params[:id])
 

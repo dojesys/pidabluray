@@ -35,12 +35,19 @@
     <%= f.label :trailer %><br />
     <%= f.text_field :trailer %>
   </div>
+  
   <div class="field">
     <%= f.label :released_at %><br />
     <%= f.text_field :released_at %>
   </div>
-
   
+  <div class="field">
+    <%= label_tag 'categories' %><br />
+    <% for category in Category.all do  %>
+      <%= check_box_tag "product[category_ids][#{category.id}]", nil, @product.categories.member?(category) %><%= category.name %>
+    <% end %>
+  </div>  
+
   <div class="actions">
     <%= f.submit %>
   </div>

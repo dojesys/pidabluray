@@ -25,6 +25,11 @@
   <%= @product.price %>
 </p>
 
+<p>
+  <b>Associated categories:</b>
+  <%= @product.categories.map{|p| p.name}.to_sentence %>
+</p>
+
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
