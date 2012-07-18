@@ -3,6 +3,8 @@
 <% end %>
 
 <h1>Catálogo</h1>
+  
+<%= paginate @products %>
 
 <% @products.each do |product| %>
   <div class="entry" >
